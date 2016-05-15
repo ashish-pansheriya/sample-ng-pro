@@ -1,0 +1,20 @@
+<html  ng-app="app1">
+<title>Demo</title>
+<script src="angular.min.js"></script>
+<body ng-controller="myCtrl">
+<div ng-controller="newCtrl">
+{{harsh}}
+{{11+11}}
+Is it realy working
+</div>
+<script>
+var application = angular.module('app1',[]);
+application.controller('myCtrl',function(){});
+application.controller('newCtrl', function($scope){
+
+$scope.harsh= 'A to Z';
+
+});
+</script>
+</body>
+</html>
