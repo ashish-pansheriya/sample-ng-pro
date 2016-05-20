@@ -1,0 +1,27 @@
+<ion-nav-bar class="bar-positive">
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-nav-view></ion-nav-view>
+
+<script id="templates/chats.html" type="text/ng-template">
+  <ion-view view-title="Chats">
+    <ion-content>
+      <ion-list>
+<ion-item ng-repeat="chat in chats" href="#/chats/{{chat.id}}">
+   Chat {{ chat.id }}
+ </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/chatDetails.html" type="text/ng-template">
+  <ion-view view-title="Chat Details">
+ <ion-content>
+   <ion-item><b>Chat:</b> {{ chat.id }}</ion-item>
+   <ion-item><b>Message:</b> {{ chat.message }}</ion-item>
+ </ion-content>
+  </ion-view>
+</script>
